@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareVirt — IDD Care Management, Done Right</title>
+  <meta name="description" content="Pakistan's leading software platform for Intellectual & Developmental Disabilities (IDD) care centers. Streamline operations, improve outcomes, and run your center with confidence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">CareVirt</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://app.carevirt.com/providers/sign_in" class="btn-ghost">Provider Login</a>
+        <a href="https://app.carevirt.com/guardians/sign_in" class="btn-ghost">Guardian Login</a>
+        <a href="https://app.carevirt.com/sign_up" class="btn-primary">Get Started Today</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
+      <a href="#modules" onclick="closeMobile()">Modules</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+      <div class="mobile-actions">
+        <a href="https://app.carevirt.com/providers/sign_in" class="btn-ghost">Provider Login</a>
+        <a href="https://app.carevirt.com/guardians/sign_in" class="btn-ghost">Guardian Login</a>
+        <a href="https://app.carevirt.com/sign_up" class="btn-primary">Get Started Today</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content" data-aos="fade-up">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Transforming Autism Care in Pakistan
+        </div>
+        <h1 class="hero-title">
+          Autism &amp; Special Need Care,<br/>
+          <span class="gradient-text">Done Right</span>
+        </h1>
+        <p class="hero-sub-lead">Run Your Center with Confidence — <em>Powered by AI</em></p>
+        <p class="hero-sub">
+          Meet CareVirt — your digital partner for Autism and related IDD care.<br/>
+          We help centers deliver consistent, personalized care without operational chaos or growth breakdown.
+          That means better outcomes for individuals and greater efficiency and impact for your center.
+        </p>
+        <div class="hero-tagline-block">
+          <p class="hero-tagline-main">The Platform of Choice for 300+ <strong>Specialized Care Providers.</strong></p>
+          <p class="hero-tagline-sub">Consistent Care, Stable Operations. Built for outcomes.</p>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary btn-large">Book a Demo</a>
+          <a href="#how-it-works" class="btn-outline btn-large">See How It Works</a>
+        </div>
+        <p class="hero-subhint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          See how structured care looks like
+        </p>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="vi-stage">
+
+          <!-- ── Glow ring behind everything ── -->
+          <div class="vi-glow"></div>
+
+          <!-- ══════════════════════════════════
+               MAIN APP WINDOW (dashboard)
+               ══════════════════════════════════ -->
+          <div class="vi-window">
+            <!-- window chrome bar -->
+            <div class="vi-bar">
+              <div class="vi-dots">
+                <span class="vd-red"></span>
+                <span class="vd-yellow"></span>
+                <span class="vd-green"></span>
+              </div>
+              <div class="vi-bar-label">
+                <svg width="13" height="13" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#14b8a6"/><path d="M8 16C8 11.6 11.6 8 16 8s8 3.6 8 8-3.6 8-8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#fff"/></svg>
+                CareVirt &mdash; Dashboard
+              </div>
+              <div class="vi-live"><span class="pulse-dot small"></span> Live</div>
+            </div>
+
+            <!-- window body -->
+            <div class="vi-body">
+
+              <!-- top KPI row -->
+              <div class="vi-kpi-row">
+                <div class="vi-kpi vi-kpi-teal">
+                  <div class="vi-kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <div class="vi-kpi-num">27</div>
+                    <div class="vi-kpi-lbl">Active Individuals</div>
+                  </div>
+                  <div class="vi-kpi-trend up">↑ 12%</div>
+                </div>
+
+                <div class="vi-kpi vi-kpi-blue">
+                  <div class="vi-kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  </div>
+                  <div>
+                    <div class="vi-kpi-num">15</div>
+                    <div class="vi-kpi-lbl">Active IEPs</div>
+                  </div>
+                  <div class="vi-kpi-trend up">↑ 8%</div>
+                </div>
+
+                <div class="vi-kpi vi-kpi-purple">
+                  <div class="vi-kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <div class="vi-kpi-num">8</div>
+                    <div class="vi-kpi-lbl">Today's Sessions</div>
+                  </div>
+                  <div class="vi-kpi-trend up">On track</div>
+                </div>
+              </div>
+
+              <!-- chart + goals split -->
+              <div class="vi-mid-row">
+                <!-- bar chart -->
+                <div class="vi-chart-box">
+                  <div class="vi-section-label">Weekly Sessions</div>
+                  <div class="vi-bars">
+                    <div class="vi-bar-col" data-tip="Monday · 4 sessions"><div class="vi-bar" style="--bh:55%"></div><span>M</span></div>
+                    <div class="vi-bar-col" data-tip="Tuesday · 7 sessions"><div class="vi-bar" style="--bh:78%"></div><span>T</span></div>
+                    <div class="vi-bar-col" data-tip="Wednesday · 5 sessions"><div class="vi-bar vi-bar-active" style="--bh:62%"></div><span>W</span></div>
+                    <div class="vi-bar-col" data-tip="Thursday · 7 sessions"><div class="vi-bar" style="--bh:90%"></div><span>T</span></div>
+                    <div class="vi-bar-col" data-tip="Friday · 6 sessions"><div class="vi-bar" style="--bh:70%"></div><span>F</span></div>
+                    <div class="vi-bar-col" data-tip="Saturday · 3 sessions"><div class="vi-bar" style="--bh:42%"></div><span>S</span></div>
+                  </div>
+                </div>
+
+                <!-- goal progress -->
+                <div class="vi-goals-box">
+                  <div class="vi-section-label">IEP Goal Progress</div>
+                  <div class="vi-goal-row">
+                    <span>Communication</span>
+                    <div class="vi-progress-track"><div class="vi-progress-fill" style="--gw:82%"></div></div>
+                    <span class="vi-pct">82%</span>
+                  </div>
+                  <div class="vi-goal-row">
+                    <span>Self-Care</span>
+                    <div class="vi-progress-track"><div class="vi-progress-fill" style="--gw:67%"></div></div>
+                    <span class="vi-pct">67%</span>
+                  </div>
+                  <div class="vi-goal-row">
+                    <span>Social Skills</span>
+                    <div class="vi-progress-track"><div class="vi-progress-fill" style="--gw:91%"></div></div>
+                    <span class="vi-pct">91%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- bottom alerts -->
+              <div class="vi-alerts">
+                <div class="vi-alert vi-alert-green">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  5 IEP goals achieved today
+                </div>
+                <div class="vi-alert vi-alert-orange">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  3 session notes pending review
+                </div>
+                <div class="vi-alert vi-alert-blue">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Next: Yahya Saad · ABA · 09:00 AM
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- iPhone 16 mockup -->
+          <div class="vi-phone">
+            <!-- side buttons (on the frame, outside screen) -->
+            <span class="iph-side iph-action"></span>
+            <span class="iph-side iph-vol-u"></span>
+            <span class="iph-side iph-vol-d"></span>
+            <span class="iph-side iph-power"></span>
+
+            <!-- titanium frame -->
+            <div class="iph-frame">
+              <!-- screen: overflow:hidden clips everything inside -->
+              <div class="iph-screen">
+
+                <!-- Dynamic Island -->
+                <div class="iph-di"><div class="iph-cam"></div></div>
+
+                <!-- status bar -->
+                <div class="iph-sb">
+                  <span class="iph-time">9:41</span>
+                  <div class="iph-sb-icons">
+                    <svg width="12" height="8" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="3" width="2.5" height="8" rx=".8" opacity=".3"/><rect x="4" y="2" width="2.5" height="9" rx=".8" opacity=".5"/><rect x="8" y="0" width="2.5" height="11" rx=".8"/><rect x="12.5" y="0" width="2.5" height="11" rx=".8" opacity=".2"/></svg>
+                    <svg width="12" height="8" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 0C4.2 0 1.2 1.4 0 3.5l1.6 1.6C2.8 3.5 5 2.3 7.5 2.3s4.7 1.2 5.9 2.8L15 3.5C13.8 1.4 10.8 0 7.5 0zm0 4C5.5 4 3.8 4.8 2.8 6.1l1.6 1.6A3.8 3.8 0 0 1 7.5 6.3c1.2 0 2.2.5 3 1.4l1.7-1.6C11.2 4.8 9.5 4 7.5 4zm0 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                    <svg width="20" height="9" viewBox="0 0 24 12" fill="none"><rect x=".5" y=".5" width="20" height="11" rx="3" stroke="currentColor" stroke-opacity=".35"/><rect x="1.5" y="1.5" width="16" height="9" rx="2" fill="currentColor"/><path d="M22 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".4"/></svg>
+                  </div>
+                </div>
+
+                <!-- scrollable content area -->
+                <div class="iph-body">
+
+                  <!-- app header -->
+                  <div class="iph-appbar">
+                    <div class="iph-appbar-l">
+                      <div class="iph-appico">
+                        <svg width="15" height="15" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#14b8a6"/><path d="M8 16C8 11.6 11.6 8 16 8s8 3.6 8 8-3.6 8-8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#fff"/></svg>
+                      </div>
+                      <div>
+                        <div class="iph-appname">Sessions</div>
+                        <div class="iph-appdate">Today, May 9</div>
+                      </div>
+                    </div>
+                    <div class="iph-livechip"><span class="pulse-dot" style="width:5px;height:5px"></span> Live</div>
+                  </div>
+
+                  <!-- stat row -->
+                  <div class="iph-stats">
+                    <div class="iph-stat s-teal"><b>6</b><span>Scheduled</span></div>
+                    <div class="iph-stat s-green"><b>2</b><span>Logged</span></div>
+                    <div class="iph-stat s-amber"><b>4</b><span>Pending</span></div>
+                  </div>
+
+                  <!-- session list -->
+                  <div class="iph-list-label">Today's Schedule</div>
+                  <div class="iph-list">
+
+                    <div class="iph-row row-done">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#4a90e2,#6366f1)">YS</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Yahya Saad</div>
+                        <div class="iph-rmeta">ABA · 09:00 AM</div>
+                      </div>
+                      <span class="iph-tag t-done">Logged</span>
+                    </div>
+
+                    <div class="iph-row row-pending">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">AY</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Ayesha Yousuf</div>
+                        <div class="iph-rmeta">Speech · 10:30 AM</div>
+                      </div>
+                      <span class="iph-tag t-done">Logged</span>
+                    </div>
+
+                    <div class="iph-row row-live">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#14b8a6,#0891b2)">MR</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Muhammad Raza</div>
+                        <div class="iph-rmeta">OT</div>
+                      </div>
+                      <span class="iph-tag t-pending"><span  style="width:4px;height:4px"></span>Pending</span>
+                    </div>
+
+                    <div class="iph-row">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#f59e0b,#f97316)">ZK</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Zainab Khan</div>
+                        <div class="iph-rmeta">Speech · 02:00 PM</div>
+                      </div>
+                      <span class="iph-tag t-soon">Soon</span>
+                    </div>
+
+                    <div class="iph-row">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#22c55e,#16a34a)">HA</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Hamza Ali</div>
+                        <div class="iph-rmeta">ABA · 03:30 PM</div>
+                      </div>
+                      <span class="iph-tag t-soon">Soon</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- iOS tab bar -->
+                <div class="iph-tabs">
+                  <div class="iph-tab iph-tab-on">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+                    <span>Sessions</span>
+                  </div>
+                  <div class="iph-tab">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    <span>People</span>
+                  </div>
+                  <div class="iph-tab">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <span>Reports</span>
+                  </div>
+                  <div class="iph-tab">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+                    <span>More</span>
+                  </div>
+                </div>
+
+                <!-- home indicator -->
+                <div class="iph-home"></div>
+
+              </div><!-- /iph-screen -->
+            </div><!-- /iph-frame -->
+          </div>
+
+          <!-- ── Floating badges ── -->
+          <div class="vi-badge vi-badge-tl">
+            <div class="vi-badge-icon" style="background:rgba(20,184,166,.12);color:#0d9488">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Goal Tracking
+          </div>
+
+          <div class="vi-badge vi-badge-mr">
+            <div class="vi-badge-icon" style="background:rgba(99,102,241,.12);color:#6366f1">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            IEP Progress Live
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+   <section class="trusted">                                                                                                                                                                                                                                                                     
+        <p class="trusted-label">Trusted by leading IDD care centers across Pakistan</p>                                                                                                                                                                                                                                                                                                                                                     
+    </section>  
+
+  <!-- ======== HOW IT WORKS ======== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-badge">Process</div>
+        <h2>Get up and running<br/><span class="gradient-text">in 3 simple steps</span></h2>
+        <p>From signup to full operation — we handle the setup so you can focus on care.</p>
+      </div>
+
+      <div class="steps-wrapper">
+        <div class="steps-line"></div>
+        <div class="step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Book a Personalized Demo</h3>
+            <p>Start with a one-on-one session with our team. We walk you through CareVirt, understand your center's needs, and show you exactly how it fits your workflow.</p>
+          </div>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Onboard &amp; Train Your Team</h3>
+            <p>Work directly with a CareVirt representative to onboard your center and train your staff — hands-on, role-specific, and built around your workflow.</p>
+          </div>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Go Live &amp; Get Ongoing Support</h3>
+            <p>Start running your center on CareVirt with confidence. Our team stays with you — responsive, available, and ready whenever you need them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MODULES ======== -->
+  <section class="modules" id="modules">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-badge">Platform Modules</div>
+        <h2>Two modules.<br/><span class="gradient-text">Every stakeholder served.</span></h2>
+        <p>Purpose-built for care providers and the families they support.</p>
+      </div>
+
+      <div class="modules-tabs" data-aos="fade-up">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="provider">Provider Command Center</button>
+          <button class="tab-btn" data-tab="guardian">Guardian Confidence Hub</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active" id="tab-provider">
+            <div class="tab-content">
+              <div class="tab-text">
+                <h3>Run your center with clarity and confidence.</h3>
+                <p>Every session tracked. Every staff member accountable. Every decision backed by clear, structured information — so you spend less time putting out fires and more time delivering care that actually moves the needle.</p>
+                <div class="feel-pills">
+                  <span>Always in control</span>
+                  <span>Zero admin chaos</span>
+                  <span>Accountability built in</span>
+                  <span>Structured visible care</span>
+                  <span>Audit-ready, always</span>
+                </div>
+              </div>
+              <div class="tab-visual">
+                <div class="module-feel-card provider-feel">
+                  <div class="mfc-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <div class="mfc-headline">Provider Command Center</div>
+                  <div class="mfc-tagline">For the people who keep care running.</div>
+                  <div class="mfc-divider"></div>
+                  <div class="mfc-quote-block">
+                    <div class="mfc-quote">"Before, I couldn't tell you how many sessions were completed this week or which staff were falling behind. Now I see it all — clearly, instantly. Progress isn't a feeling anymore. It's on the screen."</div>
+                    <div class="mfc-attr">— Center Director, Lahore</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-guardian">
+            <div class="tab-content">
+              <div class="tab-text">
+                <h3>Feel every step of your child's progress.</h3>
+                <p>You trust us with the most important person in your life. The least we can do is make sure you never feel left out. With CareVirt, every milestone, every session, every small win — you feel it as it happens.</p>
+                <div class="feel-pills">
+                  <span>Always informed</span>
+                  <span>Closer to their child</span>
+                  <span>Supported in their language</span>
+                  <span>Trust at every step</span>
+                </div>
+              </div>
+              <div class="tab-visual">
+                <div class="module-feel-card guardian-feel">
+                  <div class="mfc-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  </div>
+                  <div class="mfc-headline">Guardian Confidence Hub</div>
+                  <div class="mfc-tagline">For the families who trust us with their world.</div>
+                  <div class="mfc-divider"></div>
+                  <div class="mfc-quote-block">
+                    <div class="mfc-quote">"I used to wait for the monthly report to know how my son was doing. Now I feel his progress every single day — every session, every goal, every small step forward. It changed everything for our family."</div>
+                    <div class="mfc-attr">— Parent, Karachi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-badge">Testimonials</div>
+        <h2>Loved by care professionals<br/><span class="gradient-text">across Pakistan</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stars">★★★★★</div>
+          <p>"CareVirt completely transformed how we manage our 80+ clients. The AI scheduling alone saves us 3 hours every day. Highly recommended for any IDD center in Pakistan."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar teal">DR</div>
+            <div>
+              <strong>Dr. Rabia Noor</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured-t" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars">★★★★★</div>
+          <p>"Before CareVirt, we were drowning in paperwork. Now our therapists spend more time with children and less time writing notes. The progress tracking feature is outstanding."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar blue">AK</div>
+            <div>
+              <strong>Ahmed Khalil</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars">★★★★★</div>
+          <p>"The guardian portal was a game changer for us. Our parents are more engaged than ever with their children's therapy goals. CareVirt truly understands what care centers in Pakistan need."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar purple">SM</div>
+            <div>
+              <strong>Sara Manzoor</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-content" data-aos="fade-right">
+        <div class="section-badge">About CareVirt</div>
+        <h2>Eliminate the chaos.<br/><span class="gradient-text">Amplify the care.</span></h2>
+        <p>We eliminate operational chaos and growth breakdown from Autism and IDD centers — so they can focus on what they're actually here to do: deliver consistent care, improve outcomes, and scale their impact.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <strong>Care that actually reaches people</strong>
+              <span>When admin burden drops, therapists show up fully — and the individuals they serve feel the difference.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <strong>Growth that doesn't break things</strong>
+              <span>More clients, more staff, more sessions — CareVirt keeps your center structured as it scales.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <strong>A team that understands your world</strong>
+              <span>We're not a generic software company. We work specifically with IDD and Autism centers — your challenges are ones we know well.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual" data-aos="fade-left">
+        <div class="about-card-stack">
+          <div class="acard acard-1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div>
+              <strong>Consistent, Personalized Care</strong>
+              <p>Every individual gets the attention they deserve</p>
+            </div>
+          </div>
+          <div class="acard acard-2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <div>
+              <strong>Maximum Center Impact</strong>
+              <p>Streamlined operations, stronger outcomes</p>
+            </div>
+          </div>
+          <div class="acard acard-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div>
+              <strong>Built for Independence</strong>
+              <p>Helping individuals reach independent lives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA BANNER ======== -->
+  <section class="cta-banner">
+    <div class="cta-bg-blobs">
+      <div class="cta-blob cta-blob-1"></div>
+      <div class="cta-blob cta-blob-2"></div>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <h2>Ready to run your center the right way?</h2>
+      <p>Book a free demo and see how CareVirt can bring structure, clarity, and confidence to your center — no commitment required.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-white btn-large">Book a Free Demo</a>
+        <a href="tel:+923477789945" class="btn-ghost-white btn-large" style="display:none">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="section-badge">Get in Touch</div>
+        <h2>Book a Free<br/><span class="gradient-text">Demo Session</span></h2>
+        <p>See CareVirt in action with a personalized demo tailored to your center's needs. No pressure — just a conversation.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <span>+92 347 778 9945</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <span>sales@carevirt.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Headquarters</strong>
+              <span>Lahore, Pakistan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap calendly-wrap" data-aos="fade-left">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/harrishfaq/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="8" fill="#14b8a6"/>
+                <path d="M8 16C8 11.6 11.6 8 16 8s8 3.6 8 8-3.6 8-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="3" fill="#fff"/>
+                <path d="M16 8v3M16 21v3M8 16h3M21 16h3" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            CareVirt
+          </a>
+          <p>Pakistan's leading IDD care management platform — built to help care centers run smarter and deliver better outcomes.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" style="display:none">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.facebook.com/carevirt" target="_blank" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/923477789945" target="_blank" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Product</h4>
+          <a href="https://app.carevirt.com/calculator" target="_blank">Cost &amp; Value Calculator</a>
+          <a href="https://play.google.com/store/apps/details?id=com.icb.ichildbloom" target="_blank">PlayStore App</a>
+          <a href="https://app.carevirt.com/search/centers" target="_blank">Find Centers</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Training Videos</a>
+          <a href="#">Community</a>
+          <a href="#">Status</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2026</span> CareVirt. All rights reserved. Built with care for Pakistan's IDD community.</p>
+        <p class="footer-powered">CareVirt powered by iChildBloom SMC PVT LTD</p>
+        <p class="footer-made">Made in Toronto, ON with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <div id="bar-tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
