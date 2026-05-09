@@ -1139,6 +1139,211 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 
+/* ═══════════════════════════════════════
+   Mobile Hero Visual
+   ═══════════════════════════════════════ */
+.mobile-visual-section {
+  display: none;
+}
+@media (max-width: 900px) {
+  .mobile-visual-section {
+    display: block;
+    background: var(--bg-subtle);
+    padding: 30px 0 0;
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .mobile-visual-inner {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0;
+  }
+  .mobile-visual-inner .vi-stage {
+    transform: scale(0.62);
+    transform-origin: top center;
+    animation: none;
+  }
+  .mobile-visual-inner .vi-phone {
+    animation: none;
+  }
+  .mobile-visual-inner .vi-badge {
+    display: flex;
+  }
+}
+.mhv-glow {
+  position: absolute;
+  top: -20px; left: 50%;
+  transform: translateX(-50%);
+  width: 260px; height: 160px;
+  background: radial-gradient(ellipse, rgba(20,184,166,.22) 0%, rgba(99,102,241,.12) 55%, transparent 75%);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 0;
+}
+.mhv-window {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.mhv-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fafcff;
+}
+.mhv-dots { display: flex; gap: 5px; }
+.mhv-dots span { width: 8px; height: 8px; border-radius: 50%; background: #e2e8f0; }
+.mhv-dots span:first-child  { background: #f87171; }
+.mhv-dots span:nth-child(2) { background: #fbbf24; }
+.mhv-dots span:nth-child(3) { background: #34d399; }
+.mhv-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.mhv-live {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #14b8a6;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.mhv-stats {
+  display: flex;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.mhv-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  border-right: 1px solid #f1f5f9;
+}
+.mhv-stat:last-child { border-right: none; }
+.mhv-stat-n {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+.mhv-stat-l {
+  font-size: 0.62rem;
+  color: #94a3b8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.mhv-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.mhv-alert {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+.mhv-alert-green  { background: rgba(20,184,166,.08); color: #0d9488; }
+.mhv-alert-orange { background: rgba(245,158,11,.08); color: #d97706; }
+.mhv-alert-blue   { background: rgba(99,102,241,.08); color: #4f46e5; }
+.mhv-sessions {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.mhv-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+}
+.mhv-row:not(:last-child) { border-bottom: 1px solid #f8fafc; }
+.mhv-av {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.mhv-ri { flex: 1; display: flex; flex-direction: column; gap: 1px; }
+.mhv-rname { font-size: 0.78rem; font-weight: 600; color: #0f172a; }
+.mhv-rmeta { font-size: 0.68rem; color: #94a3b8; }
+.mhv-tag { font-size: 0.62rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
+.mhv-done     { background: rgba(20,184,166,.1); color: #0d9488; }
+.mhv-progress { background: rgba(99,102,241,.1); color: #6366f1; }
+.mhv-pending  { background: rgba(245,158,11,.1); color: #d97706; }
+.mhv-ack {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+.mhv-ack-icon {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(20,184,166,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mhv-ack-body { flex: 1; display: flex; flex-direction: column; gap: 1px; }
+.mhv-ack-body strong { font-size: 0.75rem; color: #0f172a; }
+.mhv-ack-body span   { font-size: 0.68rem; color: #64748b; }
+.mhv-ack-time { font-size: 0.65rem; color: #14b8a6; font-weight: 700; white-space: nowrap; }
+.mhv-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 50px;
+  padding: 6px 12px 6px 6px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(0,0,0,.1);
+  white-space: nowrap;
+  z-index: 10;
+  animation: badgeFloat 5s ease-in-out infinite;
+}
+.mhv-badge-icon {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mhv-badge-tl { top: -14px; left: 10px; animation-delay: 0s; }
+.mhv-badge-br { bottom: 26px; right: 10px; animation-delay: 1.5s; }
+
 .scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -1283,7 +1488,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    HOW IT WORKS
    ============================================= */
 .how-it-works {
-  padding: 100px 0;
+  padding: 70px 0;
   background: var(--bg-subtle);
 }
 
