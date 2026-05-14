@@ -106,6 +106,7 @@
                 CareVirt &mdash; Dashboard
               </div>
               <div class="vi-live"><span class="pulse-dot small"></span> Live</div>
+              <div class="vi-ai-pill"><div class="vi-ai-pill-dot"></div> Bloomy AI</div>
             </div>
 
             <!-- window body -->
@@ -196,6 +197,17 @@
                 <div class="vi-alert vi-alert-blue">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                   Next: Yahya Saad · ABA · 09:00 AM
+                </div>
+              </div>
+
+              <!-- Bloomy AI insight -->
+              <div class="vi-ai-insight">
+                <div class="vi-ai-insight-icon">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.5L12 17l-6.2 4.4 2.4-7.5L2 9.4h7.6z"/></svg>
+                </div>
+                <div>
+                  <div class="vi-ai-label">Bloomy AI Insight</div>
+                  <div class="vi-ai-text">Yahya's communication goal stalled for 3 sessions — IEP revision recommended.</div>
                 </div>
               </div>
 
@@ -391,6 +403,7 @@
               CareVirt &mdash; Dashboard
             </div>
             <div class="vi-live"><span class="pulse-dot small"></span> Live</div>
+            <div class="vi-ai-pill"><div class="vi-ai-pill-dot"></div> Bloomy AI</div>
           </div>
           <div class="vi-body">
             <div class="vi-kpi-row">
@@ -433,6 +446,10 @@
               <div class="vi-alert vi-alert-green"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 5 IEP goals achieved today</div>
               <div class="vi-alert vi-alert-orange"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 3 session notes pending review</div>
               <div class="vi-alert vi-alert-blue"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Next: Yahya Saad · ABA · 09:00 AM</div>
+            </div>
+            <div class="vi-ai-insight">
+              <div class="vi-ai-insight-icon"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.5L12 17l-6.2 4.4 2.4-7.5L2 9.4h7.6z"/></svg></div>
+              <div><div class="vi-ai-label">Bloomy AI Insight</div><div class="vi-ai-text">Yahya's communication goal stalled for 3 sessions — IEP revision recommended.</div></div>
             </div>
           </div>
         </div>
@@ -908,6 +925,69 @@
   </button>
 
   <div id="bar-tooltip"></div>
+
+  <!-- ======== BLOOMY AI WIDGET ======== -->
+  <div class="bloomy-widget" id="bloomyWidget">
+
+    <!-- Bubble button -->
+    <div class="bloomy-bubble" id="bloomyBubble">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="7" width="18" height="13" rx="3"/>
+        <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+        <circle cx="9" cy="13.5" r="1.5" fill="#fff" stroke="none"/>
+        <circle cx="15" cy="13.5" r="1.5" fill="#fff" stroke="none"/>
+        <path d="M9 17h6"/>
+      </svg>
+      <div class="bloomy-pulse"></div>
+    </div>
+
+    <!-- Label -->
+    <div class="bloomy-label" id="bloomyLabel">Chat with Bloomy</div>
+
+    <!-- Card -->
+    <div class="bloomy-card" id="bloomyCard">
+      <div class="bloomy-card-header">
+        <div class="bloomy-header-left">
+          <div class="bloomy-avatar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="7" width="18" height="13" rx="3"/>
+              <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+              <circle cx="9" cy="13.5" r="1.2" fill="#fff" stroke="none"/>
+              <circle cx="15" cy="13.5" r="1.2" fill="#fff" stroke="none"/>
+              <path d="M9 17h6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="bloomy-name">Bloomy AI</div>
+            <div class="bloomy-status"><span class="bloomy-online-dot"></span> Online</div>
+          </div>
+        </div>
+        <button class="bloomy-close" id="bloomyClose">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="bloomy-body">
+        <div class="bloomy-msg" id="bloomyMsg1" style="display:none">
+          <div class="bloomy-msg-bubble">👋 Hi! I'm Bloomy, CareVirt's AI assistant.</div>
+        </div>
+        <div class="bloomy-msg" id="bloomyMsg2" style="display:none">
+          <div class="bloomy-msg-bubble">Due to high demand, provider onboarding is currently <strong>request-based</strong> and capacity is limited. Schedule a demo to see CareVirt in action and explore how it can help scale your center.</div>
+        </div>
+        <div class="bloomy-msg" id="bloomyMsg3" style="display:none">
+          <div class="bloomy-msg-bubble">Expected timelines will be communicated and are subject to change.</div>
+        </div>
+        <div class="bloomy-typing" id="bloomyTyping" style="display:none">
+          <div class="bloomy-typing-dots"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <a href="#book-a-demo" class="bloomy-cta" id="bloomyCtaBtn">
+        Schedule a Demo &rarr;
+      </a>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

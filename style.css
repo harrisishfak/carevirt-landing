@@ -652,7 +652,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 11px 16px;
   background: #f8fafc;
   border-bottom: 1px solid #e9eef4;
-  gap: 0;
+  gap: 8px;
 }
 .vi-dots { display: flex; gap: 6px; flex-shrink: 0; }
 .vi-dots span { display: block; width: 11px; height: 11px; border-radius: 50%; }
@@ -858,6 +858,42 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .vi-alert-green  { background: rgba(34,197,94,.08);  color: #15803d; }
 .vi-alert-orange { background: rgba(245,158,11,.08); color: #b45309; }
 .vi-alert-blue   { background: rgba(74,144,226,.08); color: #1d4ed8; }
+
+/* ── Bloomy AI indicator in bar ── */
+.vi-ai-pill {
+  font-size: 0.5rem; font-weight: 800; letter-spacing: .07em;
+  text-transform: uppercase; color: #7c3aed;
+  background: rgba(124,58,237,.08);
+  border: 1px solid rgba(124,58,237,.18);
+  padding: 2px 7px; border-radius: 50px;
+  display: flex; align-items: center; gap: 4px;
+}
+.vi-ai-pill-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: #7c3aed;
+  animation: aiPillPulse 2s ease-in-out infinite;
+}
+@keyframes aiPillPulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+/* ── Bloomy AI insight card in dashboard ── */
+.vi-ai-insight {
+  display: flex; align-items: flex-start; gap: 8px;
+  margin-top: 7px; padding: 8px 10px;
+  background: linear-gradient(135deg, rgba(124,58,237,.05), rgba(99,102,241,.05));
+  border: 1px solid rgba(124,58,237,.14);
+  border-radius: 8px;
+}
+.vi-ai-insight-icon {
+  width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+}
+.vi-ai-label { font-size: 0.52rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: #7c3aed; margin-bottom: 2px; }
+.vi-ai-text  { font-size: 0.62rem; color: #64748b; line-height: 1.4; }
 
 /* ════════════════════════════════
    iPHONE 16 MOCKUP
@@ -2290,7 +2326,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .back-to-top {
   position: fixed;
   bottom: 28px;
-  right: 28px;
+  left: 28px;
   width: 46px; height: 46px;
   border-radius: 50%;
   background: var(--dark);
@@ -2311,6 +2347,152 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   pointer-events: all;
 }
 .back-to-top:hover { background: var(--teal); }
+
+/* =============================================
+   BLOOMY AI WIDGET
+   ============================================= */
+.bloomy-widget {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Bubble */
+.bloomy-bubble {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14b8a6, #6366f1);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(20,184,166,.45);
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.bloomy-bubble:hover { transform: scale(1.08); }
+.bloomy-pulse {
+  position: absolute; inset: -6px; border-radius: 50%;
+  border: 2px solid rgba(20,184,166,.35);
+  animation: bloomyPulse 2.5s ease-out infinite;
+}
+@keyframes bloomyPulse {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Label */
+.bloomy-label {
+  background: #0f172a; color: #fff;
+  font-size: 0.78rem; font-weight: 600;
+  padding: 6px 14px; border-radius: 50px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  cursor: pointer;
+  animation: bloomyLabelBounce 1s ease 1.5s both;
+}
+@keyframes bloomyLabelBounce {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.bloomy-label.hidden { display: none; }
+
+/* Card */
+.bloomy-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 48px rgba(0,0,0,.14);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  transform-origin: bottom right;
+  animation: bloomyCardIn 0.25s ease;
+}
+.bloomy-card.open { display: flex; }
+@keyframes bloomyCardIn {
+  0%   { opacity: 0; transform: scale(0.9) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Card header */
+.bloomy-card-header {
+  background: linear-gradient(135deg, #14b8a6, #6366f1);
+  padding: 14px 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.bloomy-header-left { display: flex; align-items: center; gap: 10px; }
+.bloomy-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.bloomy-name { font-size: 0.88rem; font-weight: 700; color: #fff; }
+.bloomy-status {
+  font-size: 0.68rem; color: rgba(255,255,255,.8);
+  display: flex; align-items: center; gap: 4px; margin-top: 1px;
+}
+.bloomy-online-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #4ade80;
+  display: inline-block;
+}
+.bloomy-close {
+  background: rgba(255,255,255,.15); border: none;
+  width: 28px; height: 28px; border-radius: 50%;
+  color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.bloomy-close:hover { background: rgba(255,255,255,.3); }
+
+/* Messages */
+.bloomy-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; min-height: 80px; }
+.bloomy-msg { display: flex; }
+.bloomy-msg-bubble {
+  background: #f1f5f9;
+  border-radius: 4px 16px 16px 16px;
+  padding: 10px 14px;
+  font-size: 0.83rem; color: #334155; line-height: 1.5;
+  max-width: 90%;
+}
+
+/* Typing indicator */
+.bloomy-typing { display: flex; padding: 4px 0; }
+.bloomy-typing-dots {
+  background: #f1f5f9;
+  border-radius: 4px 16px 16px 16px;
+  padding: 10px 16px;
+  display: flex; gap: 4px; align-items: center;
+}
+.bloomy-typing-dots span {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #94a3b8;
+  animation: typingDot 1.2s ease-in-out infinite;
+}
+.bloomy-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.bloomy-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typingDot {
+  0%,60%,100% { transform: translateY(0); }
+  30%         { transform: translateY(-5px); }
+}
+
+/* CTA */
+.bloomy-cta {
+  margin: 0 16px 16px;
+  background: linear-gradient(135deg, #14b8a6, #6366f1);
+  color: #fff; text-decoration: none;
+  font-size: 0.85rem; font-weight: 700;
+  padding: 12px 20px; border-radius: 12px;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.2s;
+  display: block;
+}
+.bloomy-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
 /* =============================================
    AOS (simple inline animations)

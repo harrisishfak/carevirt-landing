@@ -5,6 +5,42 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('footerYear').textContent = new Date().getFullYear();
 
+  /* ---- Bloomy AI Widget ---- */
+  const bloomyBubble = document.getElementById('bloomyBubble');
+  const bloomyCard   = document.getElementById('bloomyCard');
+  const bloomyClose  = document.getElementById('bloomyClose');
+  const bloomyCtaBtn = document.getElementById('bloomyCtaBtn');
+  const bloomyLabel  = document.getElementById('bloomyLabel');
+  const bloomyTyping = document.getElementById('bloomyTyping');
+  const bloomyMsg1   = document.getElementById('bloomyMsg1');
+  const bloomyMsg2   = document.getElementById('bloomyMsg2');
+  const bloomyMsg3   = document.getElementById('bloomyMsg3');
+  let   opened = false;
+
+  function openBloomy() {
+    bloomyCard.classList.add('open');
+    bloomyLabel.classList.add('hidden');
+    if (!opened) {
+      opened = true;
+      setTimeout(() => { bloomyTyping.style.display = 'flex'; }, 300);
+      setTimeout(() => { bloomyTyping.style.display = 'none'; bloomyMsg1.style.display = 'flex'; }, 1500);
+      setTimeout(() => { bloomyTyping.style.display = 'flex'; }, 2200);
+      setTimeout(() => { bloomyTyping.style.display = 'none'; bloomyMsg2.style.display = 'flex'; }, 3400);
+      setTimeout(() => { bloomyTyping.style.display = 'flex'; }, 4200);
+      setTimeout(() => { bloomyTyping.style.display = 'none'; bloomyMsg3.style.display = 'flex'; }, 5400);
+    }
+  }
+
+  bloomyBubble.addEventListener('click', () => {
+    bloomyCard.classList.contains('open') ? bloomyCard.classList.remove('open') : openBloomy();
+  });
+  bloomyLabel.addEventListener('click', openBloomy);
+  bloomyClose.addEventListener('click', (e) => { e.stopPropagation(); bloomyCard.classList.remove('open'); });
+  bloomyCtaBtn.addEventListener('click', () => bloomyCard.classList.remove('open'));
+
+  // Auto-open after 8s
+  setTimeout(openBloomy, 8000);
+
   /* ---- Navbar scroll effect ---- */
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
