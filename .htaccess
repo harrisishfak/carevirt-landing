@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine On
+
+# /privacy-policy.html/ → /privacy-policy.html
+RewriteRule ^privacy-policy\.html/$ /carevirt-landing/privacy-policy.html [R=301,L]
+
+# /privacy-policy/ → serve privacy-policy.html
+RewriteRule ^privacy-policy/$ privacy-policy.html [L]
+
+# /privacy-policy → serve privacy-policy.html
+RewriteRule ^privacy-policy$ privacy-policy.html [L]
