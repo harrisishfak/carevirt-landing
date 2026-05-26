@@ -13,6 +13,157 @@
 </head>
 <body>
 
+<!-- Put right after <body> -->
+<div id="flash-message" class="flash-message">
+
+  <div class="flash-icon">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+    <path 
+      d="M12 7V13" 
+      stroke="currentColor" 
+      stroke-width="2.4" 
+      stroke-linecap="round"
+    />
+    <circle cx="12" cy="17" r="1.2" fill="currentColor"/>
+  </svg>
+  </div>
+
+  <div class="flash-text">
+    Session expired. <b>Please log in again.</b>
+  </div>
+
+  <button class="flash-close" id="flashClose" aria-label="Close">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+      <path 
+        d="M18 6L6 18M6 6L18 18" 
+        stroke="currentColor" 
+        stroke-width="2.5" 
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+
+</div>
+
+<style>
+.flash-message {
+  position: fixed;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+
+  width: min(440px, calc(100% - 24px));
+
+  display: flex;
+  align-items: center;
+
+  padding: 11px 14px;
+
+  background: #fdecec;
+  border: 1px solid #dc2626;
+
+  border-radius: 11px;
+
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.08);
+
+  font-family: Inter, sans-serif;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.25s ease;
+
+  z-index: 99999;
+}
+
+.flash-message.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.flash-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: #ef4444;
+  color: #fff;
+
+  margin-right: 12px;
+}
+
+.flash-text {
+  flex: 1;
+
+  text-align: center;
+
+  color: #b42318;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  margin-right: 10px;
+}
+
+.flash-close {
+  border: none;
+  background: transparent;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  color: #b42318;
+
+  border-radius: 8px;
+
+  transition: background 0.2s ease;
+}
+
+.flash-close:hover {
+  background: rgba(180, 35, 24, 0.08);
+}
+
+@media (max-width: 600px) {
+  .flash-message {
+    top: 14px;
+    padding: 10px 12px;
+  }
+
+  .flash-text {
+    font-size: 13.5px;
+  }
+}
+</style>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("message") === "token-expired") {
+    const flash = document.getElementById("flash-message");
+    const closeBtn = document.getElementById("flashClose");
+
+    flash.classList.add("show");
+
+    closeBtn.addEventListener("click", () => {
+      flash.classList.remove("show");
+    });
+  }
+</script>
+
   <!-- ======== NAVBAR ======== -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
