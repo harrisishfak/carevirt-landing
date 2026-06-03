@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
 
+  /* ---- Back to Top ---- */
+  document.getElementById('backToTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* ---- Hamburger / Mobile Menu ---- */
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -58,10 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  /* ---- Back to Top ---- */
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
 
   /* ---- Tabs ---- */
   document.querySelectorAll('.tab-btn').forEach(btn => {

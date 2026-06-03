@@ -378,16 +378,16 @@
               <!-- screen: overflow:hidden clips everything inside -->
               <div class="iph-screen">
 
-                <!-- Dynamic Island -->
-                <div class="iph-di"><div class="iph-cam"></div></div>
-
-                <!-- status bar -->
+                <!-- Status bar + Dynamic Island (iPhone 15/16/17 layout) -->
                 <div class="iph-sb">
                   <span class="iph-time">9:41</span>
+                  <div class="iph-di">
+                    <div class="iph-cam"></div>
+                  </div>
                   <div class="iph-sb-icons">
-                    <svg width="12" height="8" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="3" width="2.5" height="8" rx=".8" opacity=".3"/><rect x="4" y="2" width="2.5" height="9" rx=".8" opacity=".5"/><rect x="8" y="0" width="2.5" height="11" rx=".8"/><rect x="12.5" y="0" width="2.5" height="11" rx=".8" opacity=".2"/></svg>
-                    <svg width="12" height="8" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 0C4.2 0 1.2 1.4 0 3.5l1.6 1.6C2.8 3.5 5 2.3 7.5 2.3s4.7 1.2 5.9 2.8L15 3.5C13.8 1.4 10.8 0 7.5 0zm0 4C5.5 4 3.8 4.8 2.8 6.1l1.6 1.6A3.8 3.8 0 0 1 7.5 6.3c1.2 0 2.2.5 3 1.4l1.7-1.6C11.2 4.8 9.5 4 7.5 4zm0 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
-                    <svg width="20" height="9" viewBox="0 0 24 12" fill="none"><rect x=".5" y=".5" width="20" height="11" rx="3" stroke="currentColor" stroke-opacity=".35"/><rect x="1.5" y="1.5" width="16" height="9" rx="2" fill="currentColor"/><path d="M22 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".4"/></svg>
+                    <svg width="11" height="8" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="4" width="2.5" height="7" rx=".6"/><rect x="4" y="2.5" width="2.5" height="8.5" rx=".6"/><rect x="8" y="1" width="2.5" height="10" rx=".6"/><rect x="12" y="0" width="2.5" height="11" rx=".6"/></svg>
+                    <svg width="12" height="8" viewBox="0 0 17 12" fill="currentColor"><path d="M8.5 1C5.4 1 2.6 2.3 0.6 4.4L2 5.8C3.6 4.1 5.9 3 8.5 3s4.9 1.1 6.5 2.8l1.4-1.4C14.4 2.3 11.6 1 8.5 1zm0 4c-1.9 0-3.6.8-4.8 2l1.4 1.4C6 7.5 7.2 7 8.5 7s2.5.5 3.4 1.4L13.3 7C12.1 5.8 10.4 5 8.5 5zm0 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                    <svg width="22" height="9" viewBox="0 0 25 12" fill="none"><rect x=".5" y=".5" width="21" height="11" rx="3.5" stroke="currentColor" stroke-opacity=".35"/><rect x="1.5" y="1.5" width="18" height="9" rx="2.5" fill="currentColor"/><path d="M23 4.5v3a1.5 1.5 0 0 0 0-3z" fill="currentColor" opacity=".45"/></svg>
                   </div>
                 </div>
 
@@ -402,7 +402,7 @@
                       </div>
                       <div>
                         <div class="iph-appname">Sessions</div>
-                        <div class="iph-appdate">Today, May 9</div>
+                        <div class="iph-appdate" id="iphAppDate">Today, May 9</div>
                       </div>
                     </div>
                     <div class="iph-livechip"><span class="pulse-dot" style="width:5px;height:5px"></span> Live</div>
@@ -410,40 +410,40 @@
 
                   <!-- stat row -->
                   <div class="iph-stats">
-                    <div class="iph-stat s-teal"><b>6</b><span>Scheduled</span></div>
+                    <div class="iph-stat s-teal"><b>4</b><span>Scheduled</span></div>
                     <div class="iph-stat s-green"><b>2</b><span>Logged</span></div>
-                    <div class="iph-stat s-amber"><b>4</b><span>Pending</span></div>
+                    <div class="iph-stat s-amber"><b>2</b><span>Pending</span></div>
                   </div>
 
                   <!-- session list -->
                   <div class="iph-list-label">Today's Schedule</div>
                   <div class="iph-list">
 
-                    <div class="iph-row row-done">
+                    <div class="iph-row row-live">
                       <div class="iph-av" style="background:linear-gradient(135deg,#4a90e2,#6366f1)">YS</div>
                       <div class="iph-ri">
                         <div class="iph-rname">Yahya Saad</div>
                         <div class="iph-rmeta">ABA · 09:00 AM</div>
                       </div>
-                      <span class="iph-tag t-done">Logged</span>
-                    </div>
-
-                    <div class="iph-row row-pending">
-                      <div class="iph-av" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">AY</div>
-                      <div class="iph-ri">
-                        <div class="iph-rname">Ayesha Yousuf</div>
-                        <div class="iph-rmeta">Speech · 10:30 AM</div>
-                      </div>
-                      <span class="iph-tag t-done">Logged</span>
+                      <span class="iph-tag t-pending">Pending</span>
                     </div>
 
                     <div class="iph-row row-live">
+                      <div class="iph-av" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">AY</div>
+                      <div class="iph-ri">
+                        <div class="iph-rname">Ayesha Yousuf</div>
+                        <div class="iph-rmeta">ST · 10:30 AM</div>
+                      </div>
+                      <span class="iph-tag t-pending">Pending</span>
+                    </div>
+
+                    <div class="iph-row row-pending">
                       <div class="iph-av" style="background:linear-gradient(135deg,#14b8a6,#0891b2)">MR</div>
                       <div class="iph-ri">
                         <div class="iph-rname">Muhammad Raza</div>
                         <div class="iph-rmeta">OT</div>
                       </div>
-                      <span class="iph-tag t-pending"><span  style="width:4px;height:4px"></span>Pending</span>
+                      <span class="iph-tag t-done"><span  style="width:4px;height:4px"></span>Logged</span>
                     </div>
 
                     <div class="iph-row">
@@ -452,7 +452,7 @@
                         <div class="iph-rname">Zainab Khan</div>
                         <div class="iph-rmeta">Speech · 02:00 PM</div>
                       </div>
-                      <span class="iph-tag t-pending">Pending</span>
+                      <span class="iph-tag t-done">Logged</span>
                     </div>
 
                     <div class="iph-row">
@@ -464,6 +464,69 @@
                       <span class="iph-tag t-soon">Soon</span>
                     </div>
 
+                  </div>
+                </div>
+
+                <!-- Success toast -->
+                <div class="iph-toast" id="iphToast">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Session logged successfully
+                </div>
+
+                <!-- ── Mark Session Form (slides in on row click) ── -->
+                <div class="iph-form-screen" id="iphFormScreen">
+
+                  <!-- Status bar (same as main screen) -->
+                  <div class="iph-sb iph-form-sb">
+                    <span class="iph-time">9:41</span>
+                    <div class="iph-di">
+                      <div class="iph-cam"></div>
+                    </div>
+                    <div class="iph-sb-icons">
+                      <svg width="11" height="8" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="4" width="2.5" height="7" rx=".6"/><rect x="4" y="2.5" width="2.5" height="8.5" rx=".6"/><rect x="8" y="1" width="2.5" height="10" rx=".6"/><rect x="12" y="0" width="2.5" height="11" rx=".6"/></svg>
+                      <svg width="12" height="8" viewBox="0 0 17 12" fill="currentColor"><path d="M8.5 1C5.4 1 2.6 2.3 0.6 4.4L2 5.8C3.6 4.1 5.9 3 8.5 3s4.9 1.1 6.5 2.8l1.4-1.4C14.4 2.3 11.6 1 8.5 1zm0 4c-1.9 0-3.6.8-4.8 2l1.4 1.4C6 7.5 7.2 7 8.5 7s2.5.5 3.4 1.4L13.3 7C12.1 5.8 10.4 5 8.5 5zm0 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                      <svg width="22" height="9" viewBox="0 0 25 12" fill="none"><rect x=".5" y=".5" width="21" height="11" rx="3.5" stroke="currentColor" stroke-opacity=".35"/><rect x="1.5" y="1.5" width="18" height="9" rx="2.5" fill="currentColor"/><path d="M23 4.5v3a1.5 1.5 0 0 0 0-3z" fill="currentColor" opacity=".45"/></svg>
+                    </div>
+                  </div>
+
+                  <!-- Nav bar -->
+                  <div class="iph-form-bar">
+                    <button class="iph-back-btn" id="iphBackBtn">
+                      <svg width="8" height="13" viewBox="0 0 9 15" fill="none"><path d="M8 1L1.5 7.5 8 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="iph-form-title">Mark as Finished</span>
+                  </div>
+
+                  <!-- form body -->
+                  <div class="iph-form-body">
+                    <div class="iph-form-patient" id="iphFormPatient"></div>
+
+                    <label class="iph-label">Session Date</label>
+                    <div class="iph-date-display" id="iphDateField"></div>
+
+                    <label class="iph-label">Session Note</label>
+                    <textarea class="iph-textarea" placeholder="Write session notes here…" rows="4"></textarea>
+
+                    <label class="iph-label">Progress</label>
+                    <select class="iph-input iph-select">
+                      <option value="" disabled selected>Select progress…</option>
+                      <option>No Progress</option>
+                      <option>Minimal Progress</option>
+                      <option>Below Average</option>
+                      <option>Average</option>
+                      <option>Good Progress</option>
+                      <option>Excellent Progress</option>
+                    </select>
+
+                    <label class="iph-label">Upload Attachment</label>
+                    <label class="iph-file-label">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      <span id="iphFileName">Choose file…</span>
+                      <input type="file" style="display:none" onchange="document.getElementById('iphFileName').textContent=this.files[0]?this.files[0].name:'Choose file…'" />
+                    </label>
+
+                    <a href="#" class="iph-more-link">+ Add more details <span class="iph-optional">(Optional)</span></a>
+                    <button class="iph-submit-btn">Submit</button>
                   </div>
                 </div>
 
@@ -492,6 +555,28 @@
 
               </div><!-- /iph-screen -->
             </div><!-- /iph-frame -->
+
+            <!-- ── Guided Demo Tooltips (4 steps) ── -->
+            <div class="demo-dot demo-dot-1 active" id="demoDot1"></div>
+            <div class="demo-tip demo-tip-1 active" id="demoTip1">
+              <div class="demo-tip-bubble">Click Session</div>
+            </div>
+
+            <div class="demo-dot demo-dot-2" id="demoDot2"></div>
+            <div class="demo-tip demo-tip-2" id="demoTip2">
+              <div class="demo-tip-bubble">Enter Notes</div>
+            </div>
+
+            <div class="demo-dot demo-dot-3" id="demoDot3"></div>
+            <div class="demo-tip demo-tip-3" id="demoTip3">
+              <div class="demo-tip-bubble">Select Progress</div>
+            </div>
+
+            <div class="demo-dot demo-dot-4" id="demoDot4"></div>
+            <div class="demo-tip demo-tip-4" id="demoTip4">
+              <div class="demo-tip-bubble">Click Submit</div>
+            </div>
+
           </div>
 
           <!-- ── Floating badges ── -->
@@ -513,7 +598,7 @@
             <div class="vi-badge-icon" style="background:rgba(99,102,241,.12);color:#6366f1">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
             </div>
-            IEP Progress Live
+            IEP Progress Live <span class="pulse-dot" style="width:6px;height:6px;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.4);margin-left:4px;flex-shrink:0;"></span>
           </div>
 
           <div class="vi-badge vi-badge-bl">
@@ -1070,12 +1155,21 @@
     </div>
   </footer>
 
+
+  <div id="bar-tooltip"></div>
+
   <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <div id="bar-tooltip"></div>
+  <!-- ======== WHATSAPP WIDGET ======== -->
+  <div class="wa-widget">
+    <a class="wa-bubble" href="https://api.whatsapp.com/send/?phone=923477789945&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <div class="wa-pulse"></div>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+  </div>
 
   <!-- ======== BLOOMY AI WIDGET ======== -->
   <div class="bloomy-widget" id="bloomyWidget">
@@ -1140,5 +1234,190 @@
   </div>
 
   <script src="script.js"></script>
+<script>
+// Session form — desktop only (pointer device)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const formScreen = document.getElementById('iphFormScreen');
+  const backBtn    = document.getElementById('iphBackBtn');
+  const patientEl = document.getElementById('iphFormPatient');
+  const dateField = document.getElementById('iphDateField');
+  const appDate = document.getElementById('iphAppDate');
+  if (appDate) {
+    const d = new Date();
+    appDate.textContent = 'Today, ' + d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+  const today = new Date();
+  dateField.textContent = today.toLocaleDateString('en-US', { weekday:'short', year:'numeric', month:'long', day:'numeric' });
+
+  let activeRow = null;
+  const tips = [1,2,3,4].map(n => document.getElementById('demoTip' + n));
+  const dots = [1,2,3,4].map(n => document.getElementById('demoDot' + n));
+
+  function showStep(n) {
+    tips.forEach(x => x && x.classList.remove('active'));
+    dots.forEach(x => x && x.classList.remove('active'));
+    if (n >= 1 && n <= 4) {
+      tips[n-1] && tips[n-1].classList.add('active');
+      dots[n-1] && dots[n-1].classList.add('active');
+    }
+  }
+
+  showStep(1);
+
+  document.querySelectorAll('.iph-row.row-live').forEach(row => {
+    row.addEventListener('click', () => {
+      activeRow = row;
+      const name = row.querySelector('.iph-rname')?.textContent || '';
+      const meta = row.querySelector('.iph-rmeta')?.textContent || '';
+      patientEl.textContent = name + (meta ? ' · ' + meta : '');
+      formScreen.classList.add('open');
+      showStep(2);
+    });
+  });
+
+  backBtn.addEventListener('click', () => {
+    formScreen.classList.remove('open');
+    showStep(1);
+  });
+
+  const textarea   = formScreen.querySelector('.iph-textarea');
+  const selectEl   = formScreen.querySelector('.iph-select');
+  const submitBtn  = formScreen.querySelector('.iph-submit-btn');
+  const toast      = document.getElementById('iphToast');
+
+  textarea.addEventListener('input', () => { if (textarea.value.trim().length > 0) showStep(3); });
+
+  selectEl.addEventListener('change', () => { if (selectEl.value) showStep(4); });
+
+  submitBtn.addEventListener('click', () => {
+    formScreen.classList.remove('open');
+    showStep(0);
+
+    if (activeRow) {
+      activeRow.classList.remove('row-live', 'row-pending');
+      activeRow.classList.add('row-done');
+      activeRow.style.cursor = 'default';
+      const tag = activeRow.querySelector('.iph-tag');
+      if (tag) { tag.className = 'iph-tag t-done'; tag.innerHTML = 'Logged'; }
+      activeRow = null;
+    }
+
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+  });
+}
+</script>
+
+<canvas id="particle-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+<script>
+(function(){
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let W = canvas.width = window.innerWidth;
+  let H = canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; });
+
+  const COLORS = ['#1a5fc4','#3a4fa8','#b84e2a','#0d5ec4'];
+  const COUNT  = 130;
+  const MIN_R  = 18;
+  const MAX_R  = 340;
+  let time = 0;
+
+  let mouse  = { x: W/2, y: H/2 };
+  let smooth = { x: W/2, y: H/2 };
+  let prevSmooth = { x: W/2, y: H/2 };
+  let vel = { x: 0, y: 0 };
+  let globalAlphaScale = 0; // fade in on load
+  let active = true;
+  let scrollFade = 1;
+  const trustedSection = document.querySelector('.trusted');
+
+  window.addEventListener('scroll', () => {
+    if (!trustedSection) return;
+    const rect = trustedSection.getBoundingClientRect();
+    // Start fading when trusted section top hits bottom of viewport, fully gone when it hits center
+    const fadeStart = window.innerHeight;
+    const fadeEnd   = window.innerHeight * 0.4;
+    scrollFade = Math.min(1, Math.max(0, (rect.top - fadeEnd) / (fadeStart - fadeEnd)));
+  });
+
+  document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+
+  function makeParticle(i) {
+    const angle = Math.random() * Math.PI * 2;
+    const r = MIN_R + Math.sqrt(Math.random()) * (MAX_R - MIN_R);
+    const norm = (r - MIN_R) / (MAX_R - MIN_R);
+    const tx = W/2 + Math.cos(angle) * r;
+    const ty = H/2 + Math.sin(angle) * r;
+    return {
+      homeAngle: angle,
+      homeR: r,
+      norm,
+      wavePhase: Math.random() * Math.PI * 2,
+      x: tx, y: ty, // start at correct position immediately
+      vx: 0, vy: 0,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      alpha: 0.9 - norm * 0.6,
+      w: 2,
+      h: norm < 0.15 ? 2 : 6,
+    };
+  }
+
+  const particles = Array.from({ length: COUNT }, (_, i) => makeParticle(i));
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    time += 0.018;
+
+    prevSmooth.x = smooth.x;
+    prevSmooth.y = smooth.y;
+    smooth.x += (mouse.x - smooth.x) * 0.03;
+    smooth.y += (mouse.y - smooth.y) * 0.03;
+
+    // Track velocity of the smooth cursor
+    vel.x = vel.x * 0.7 + (smooth.x - prevSmooth.x) * 0.3;
+    vel.y = vel.y * 0.7 + (smooth.y - prevSmooth.y) * 0.3;
+    const speed = Math.sqrt(vel.x * vel.x + vel.y * vel.y);
+
+    // Smooth fade-in on load
+    globalAlphaScale = Math.min(1, globalAlphaScale + 0.008);
+
+    for (const p of particles) {
+      // Subtle wave ripple
+      const wave = Math.sin(time * 1.8 + p.wavePhase) * (6 + p.norm * 14);
+      const r = p.homeR + wave;
+
+      // Velocity shifts density — trailing side gets more, leading side less
+      const drag = p.norm * 18;
+      const tx = smooth.x + Math.cos(p.homeAngle) * r - vel.x * drag;
+      const ty = smooth.y + Math.sin(p.homeAngle) * r - vel.y * drag;
+
+      p.vx += (tx - p.x) * 0.028;
+      p.vy += (ty - p.y) * 0.028;
+      p.vx *= 0.93;
+      p.vy *= 0.93;
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      const rot = Math.atan2(p.y - smooth.y, p.x - smooth.x) + Math.PI / 2;
+      const motionFade = Math.max(0.4, 1 - speed * 0.04);
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(rot);
+      ctx.globalAlpha = p.alpha * motionFade * globalAlphaScale * scrollFade;
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
+</script>
 </body>
 </html>
