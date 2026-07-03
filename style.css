@@ -369,9 +369,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--teal-dark);
   padding: 8px 18px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   font-weight: 600;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   letter-spacing: .02em;
   backdrop-filter: blur(8px);
 }
