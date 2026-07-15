@@ -38,8 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
   bloomyClose.addEventListener('click', (e) => { e.stopPropagation(); bloomyCard.classList.remove('open'); });
   bloomyCtaBtn.addEventListener('click', () => bloomyCard.classList.remove('open'));
 
-  // Auto-open after 8s
-  setTimeout(openBloomy, 8000);
+  // Auto-open after 8s only if user has scrolled (widget visible)
+  setTimeout(() => { if (bloomyWidget.classList.contains('widgets-visible')) openBloomy(); }, 8000);
+
+  /* ---- Widget scroll reveal ---- */
+  const waWidget     = document.querySelector('.wa-widget');
+  const bloomyWidget = document.querySelector('.bloomy-widget');
+  function updateWidgetVisibility() {
+    const show = window.scrollY > 80;
+    waWidget.classList.toggle('widgets-visible', show);
+    bloomyWidget.classList.toggle('widgets-visible', show);
+  }
+  window.addEventListener('scroll', updateWidgetVisibility, { passive: true });
+  updateWidgetVisibility();
 
   /* ---- Navbar scroll effect ---- */
   const navbar = document.getElementById('navbar');
