@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/5.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
 
@@ -254,11 +253,11 @@
                 <span class="vd-green"></span>
               </div>
               <div class="vi-bar-label">
-                Provider Command Center
+                <svg width="13" height="13" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#14b8a6"/><path d="M8 16C8 11.6 11.6 8 16 8s8 3.6 8 8-3.6 8-8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#fff"/></svg>
+                CareVirt &mdash; Dashboard
               </div>
               <div class="vi-live"><span class="pulse-dot small"></span> Live</div>
               <div class="vi-ai-pill"><div class="vi-ai-pill-dot"></div> Bloomy AI</div>
-               <div class="vi-ai-pilled">CareVirt</div>
             </div>
 
             <!-- window body -->
@@ -560,7 +559,7 @@
             <!-- ── Guided Demo Tooltips (4 steps) ── -->
             <div class="demo-dot demo-dot-1 active" id="demoDot1"></div>
             <div class="demo-tip demo-tip-1 active" id="demoTip1">
-              <div class="demo-tip-bubble">Click Here</div>
+              <div class="demo-tip-bubble">Click Session</div>
             </div>
 
             <div class="demo-dot demo-dot-2" id="demoDot2"></div>
@@ -637,11 +636,10 @@
             <div class="vi-dots"><span class="vd-red"></span><span class="vd-yellow"></span><span class="vd-green"></span></div>
             <div class="vi-bar-label">
               <svg width="13" height="13" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#14b8a6"/><path d="M8 16C8 11.6 11.6 8 16 8s8 3.6 8 8-3.6 8-8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#fff"/></svg>
-              Provider Command Center
+              CareVirt &mdash; Dashboard
             </div>
             <div class="vi-live"><span class="pulse-dot small"></span> Live</div>
             <div class="vi-ai-pill"><div class="vi-ai-pill-dot"></div> Bloomy AI</div>
-             <div class="vi-ai-pilled">CareVirt</div>
           </div>
           <div class="vi-body">
             <div class="vi-kpi-row">
@@ -749,8 +747,8 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Know Every Individual, Deeply</h3>
-          <p>Paperless intake from anywhere in low-resource settings. Every profile is structured from day one—so nothing falls through the cracks.</p>
-        </div>
+          <p>Paperless intake from anywhere in low-resource settings. Every profile is structured from day one—so nothing falls through the cracks.</p>       
+         </div>
 
         <div class="feat-card fc-blue">
           <div class="feat-icon feat-icon-blue">
@@ -795,18 +793,8 @@
       </div>
 
       <div class="features-cta" data-aos="fade-up">
-        <div class="fcta-glow"></div>
-        <div class="fcta-badge">
-          <span class="fcta-badge-dot"></span>
-          Trusted by leading care centers
-        </div>
-        <h3 class="fcta-heading">The leading special care centers are<br/>already setting the new standard.</h3>
-        <p class="fcta-sub">Every week you wait, the gap becomes harder to close.</p>
-        <a href="#book-a-demo" class="btn-primary btn-large fcta-btn">
-          See It Live — Book a Demo
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <p class="fcta-note">No commitment. Free personalized demo.</p>
+        <p>The leading special care centers are already setting the new standard.<br/>Every week you wait, the gap becomes harder to close.</p>
+        <a href="#book-a-demo" class="btn-primary btn-large">See It Live — Book a Demo</a>
       </div>
 
     </div>
@@ -821,55 +809,28 @@
       </div>
 
       <div class="steps-wrapper">
-
-        <div class="step" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
-          <div class="step-icon-wrap">
-            <div class="step-number">01</div>
-            <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div class="step-connector"><div class="step-connector-line"></div></div>
+        <div class="steps-line"></div>
+        <div class="step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">01</div>
           <div class="step-content">
             <h3>Book a Personalized Demo</h3>
             <p>Start with a one-on-one session. We understand your center’s needs and show how CareVirt fits your workflow.</p>
-            <div class="step-chip">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              30 mins
-            </div>
           </div>
         </div>
-
-        <div class="step" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-          <div class="step-icon-wrap">
-            <div class="step-number">02</div>
-            <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-          </div>
-          <div class="step-connector"><div class="step-connector-line"></div></div>
+        <div class="step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">02</div>
           <div class="step-content">
             <h3>Onboard &amp; Train Your Team</h3>
             <p>Work directly with a CareVirt representative to onboard your center and train your staff — hands-on, role-specific, and built around your workflow.</p>
-            <div class="step-chip">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              3–5 days
-            </div>
           </div>
         </div>
-
-        <div class="step" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">
-          <div class="step-icon-wrap">
-            <div class="step-number">03</div>
-            <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <div class="step-connector step-connector-last"><div class="step-connector-line"></div></div>
+        <div class="step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">03</div>
           <div class="step-content">
             <h3>Go Live &amp; Scale</h3>
             <p>Launch your center on CareVirt with confidence. Our team stays with you for ongoing support whenever needed.</p>
-            <div class="step-chip step-chip-live">
-              <span class="step-chip-dot"></span>
-              Ongoing Support
-            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -884,141 +845,70 @@
       </div>
 
       <div class="modules-tabs" data-aos="fade-up">
-
-        <!-- Pill switcher -->
-        <div class="tab-switcher">
-          <button class="tab-btn active" data-tab="provider">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            Provider Command Center
-            <span class="tab-btn-active-dot"></span>
-          </button>
-          <button class="tab-btn" data-tab="guardian">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            Guardian Confidence Hub
-            <span class="tab-btn-active-dot"></span>
-          </button>
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="provider">Provider Command Center</button>
+          <button class="tab-btn" data-tab="guardian">Guardian Confidence Hub</button>
         </div>
 
         <div class="tab-panels">
-
-          <!-- ── Provider tab ── -->
           <div class="tab-panel active" id="tab-provider">
             <div class="tab-content">
-
               <div class="tab-text">
-                <div class="tab-label">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  For Center Directors &amp; Admins
-                </div>
                 <h3>Run your center with clarity and confidence.</h3>
                 <p>Every session tracked. Every staff member accountable. Every decision backed by clear, structured information — so you spend less time putting out fires and more time delivering care that actually moves the needle.</p>
-                <ul class="module-checklist">
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Always in Control
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Zero Admin Chaos
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Real-Time Progress. Real Trust.
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Accountability Built In
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Structured Care, Visible Always
-                  </li>
-                </ul>
+                <div class="feel-pills">
+                  <span>Always in Control</span>
+                  <span>Zero Admin Chaos</span>
+                  <span>Real-Time Progress. Real Trust.</span>
+                  <span>Accountability Built In</span>
+                  <span>Structured Care, Visible Always</span>
+                </div>
               </div>
-
               <div class="tab-visual">
                 <div class="module-feel-card provider-feel">
-                  <div class="mfc-top">
-                    <div class="mfc-icon">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    </div>
-                    <div>
-                      <div class="mfc-headline">Provider Command Center</div>
-                      <div class="mfc-tagline">For the people who keep care running.</div>
-                    </div>
+                  <div class="mfc-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                   </div>
+                  <div class="mfc-headline">Provider Command Center</div>
+                  <div class="mfc-tagline">For the people who keep care running.</div>
                   <div class="mfc-divider"></div>
                   <div class="mfc-quote-block">
-                    <svg class="mfc-quote-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     <div class="mfc-quote">"Before, I couldn't tell you how many sessions were completed this week or which staff were falling behind. Now I see it all — clearly, instantly. Progress isn't a feeling anymore. It's on the screen."</div>
-                    <div class="mfc-attr">
-                      <div class="mfc-avatar">CD</div>
-                      Center Director, Lahore
-                    </div>
+                    <div class="mfc-attr">— Center Director, Lahore</div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
-          <!-- ── Guardian tab ── -->
           <div class="tab-panel" id="tab-guardian">
             <div class="tab-content">
-
               <div class="tab-text">
-                <div class="tab-label tab-label-teal">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                  For Parents &amp; Guardians
-                </div>
                 <h3>Feel every step of your child's progress.</h3>
                 <p>You trust us with the most important person in your life. The least we can do is make sure you never feel left out. With CareVirt, every milestone, every session, every small win — you feel it as it happens.</p>
-                <ul class="module-checklist mcl-teal">
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Always Informed
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Closer to Your Child
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Support in Your Language
-                  </li>
-                  <li >
-                    <span class="mcl-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                    Trust at Every Step
-                  </li>
-                </ul>
+                <div class="feel-pills">
+                  <span>Always Informed</span>
+                  <span>Closer to Your Child</span>
+                  <span>Support in Your Language</span>
+                  <span>Trust at Every Step</span>
+                </div>
               </div>
-
               <div class="tab-visual">
                 <div class="module-feel-card guardian-feel">
-                  <div class="mfc-top">
-                    <div class="mfc-icon">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <div>
-                      <div class="mfc-headline">Guardian Confidence Hub</div>
-                      <div class="mfc-tagline">For the families who trust us with their world.</div>
-                    </div>
+                  <div class="mfc-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                   </div>
+                  <div class="mfc-headline">Guardian Confidence Hub</div>
+                  <div class="mfc-tagline">For the families who trust us with their world.</div>
                   <div class="mfc-divider"></div>
                   <div class="mfc-quote-block">
-                    <svg class="mfc-quote-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     <div class="mfc-quote">"I used to wait for the monthly report to know how my son was doing. Now I feel his progress every single day — every session, every goal, every small step forward. It changed everything for our family."</div>
-                    <div class="mfc-attr">
-                      <div class="mfc-avatar mfc-avatar-teal">PK</div>
-                      Parent, Karachi
-                    </div>
+                    <div class="mfc-attr">— Parent, Karachi</div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -1533,60 +1423,6 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   }
 
   animate();
-})();
-</script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-
-// ── AOS init ──
-AOS.init({
-  duration: 700,
-  easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-  once: true,
-  offset: 60,
-  delay: 0,
-});
-
-// ── Custom scroll reveal with stagger ──
-(function () {
-  const revealEls = document.querySelectorAll(
-    '.stat-item, .about-stat, .pricing-card, .module-feature-item'
-  );
-
-  revealEls.forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(28px)';
-    el.style.transition = 'opacity 0.6s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)';
-    el.style.transitionDelay = (i % 4) * 80 + 'ms';
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(el => observer.observe(el));
-
-  // Subtle section heading pop
-  document.querySelectorAll('.section-header h2, .section-header p').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
-    el.style.transition = `opacity 0.55s ease ${i * 100}ms, transform 0.55s ease ${i * 100}ms`;
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-        obs.unobserve(el);
-      }
-    }, { threshold: 0.2 });
-    obs.observe(el);
-  });
 })();
 </script>
 </body>
