@@ -74,6 +74,66 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
+  /* ---- Nav Dropdowns ---- */
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  function positionPanel(dropdown) {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    const panel = dropdown.querySelector('.nav-dropdown-panel');
+    const btnRect = btn.getBoundingClientRect();
+    const panelWidth = panel.offsetWidth;
+    const viewportWidth = window.innerWidth;
+
+    // Default: center under button
+    let left = btnRect.left + btnRect.width / 2 - panelWidth / 2;
+    // Clamp so panel doesn't bleed off screen edges
+    left = Math.max(12, Math.min(left, viewportWidth - panelWidth - 12));
+    panel.style.left = left + 'px';
+  }
+
+  function closeAll(except) {
+    dropdowns.forEach(d => { if (d !== except) d.classList.remove('open'); });
+  }
+
+  let hoverTimer = null;
+
+  dropdowns.forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+
+    // Click toggle
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('open');
+      closeAll(dropdown);
+      if (!isOpen) {
+        dropdown.classList.add('open');
+        positionPanel(dropdown);
+      } else {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // Hover open
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(hoverTimer);
+      closeAll(dropdown);
+      dropdown.classList.add('open');
+      positionPanel(dropdown);
+    });
+
+    // Hover close with small delay so cursor can move into panel
+    dropdown.addEventListener('mouseleave', () => {
+      hoverTimer = setTimeout(() => dropdown.classList.remove('open'), 120);
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', () => closeAll(null));
+
+  // Prevent panel clicks from closing
+  document.querySelectorAll('.nav-dropdown-panel').forEach(panel => {
+    panel.addEventListener('click', e => e.stopPropagation());
+  });
 
   /* ---- Tabs ---- */
   document.querySelectorAll('.tab-btn').forEach(btn => {
