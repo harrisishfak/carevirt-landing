@@ -426,8 +426,91 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .country-item:hover { background: #f4f6ff; color: var(--primary); }
 
+.who-panel {
+  width: 420px;
+  padding: 18px 10px;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-dropdown.open .who-panel {
+  display: flex;
+}
+.who-panel .feature-name {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  white-space: normal;
+  letter-spacing: normal;
+}
+
+.login-panel {
+  width: 240px;
+  padding: 10px;
+  flex-direction: column;
+  gap: 4px;
+  right: 0;
+  left: auto;
+}
+.nav-dropdown.open .login-panel {
+  display: flex;
+}
+.login-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.login-item:hover { background: #f0f7ff; }
+.login-item-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ccfbf1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-item-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: #0891b2;
+}
+.login-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.login-item-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #111827;
+}
+.login-item-desc {
+  font-size: 0.76rem;
+  color: #6b7280;
+}
+
 .nav-actions { display: flex; align-items: center; gap: 5px; margin-left: auto; flex-shrink: 0; }
-.nav-actions .btn-primary { padding: 7px 14px; font-size: 0.84rem; }
+.nav-actions .btn-primary { padding: 7px 14px; font-size: 0.84rem; margin-left: 10px; }
+.nav-actions .login-dropdown .nav-dropdown-btn {
+  color: var(--text);
+  border-radius: 50px;
+  padding: 7px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: #f0f0f0;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-actions .login-dropdown .nav-dropdown-btn:hover,
+.nav-actions .login-dropdown.open .nav-dropdown-btn {
+  background: #e2e2e2;
+  color: var(--text);
+}
 
 .hamburger {
   display: none;
