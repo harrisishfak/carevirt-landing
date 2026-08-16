@@ -3497,6 +3497,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .mob-section.open .mob-section-body {
     display: flex;
+    max-height: 220px;
+    overflow-y: auto;
   }
   .mob-feature {
     padding: 9px 28px;
