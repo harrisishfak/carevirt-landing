@@ -437,9 +437,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .who-panel .feature-name {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #111827;
+  color: #575a5f;
   white-space: normal;
   letter-spacing: normal;
 }
