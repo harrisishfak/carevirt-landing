@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="images/curved_favicon.png" />
+  <link rel="icon" type="image/png" href="images/5.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
@@ -469,10 +469,42 @@
         
       </div>
 
+       <div class="mob-section">
+        <a class="mob-section-btn" href="#pricing" onclick="closeMobile()">Pricing</a>
+      </div>
+
       <div class="mobile-actions">
-        <a href="https://app.carevirt.com/providers/sign_in" class="btn-ghost" onclick="closeMobile()">Provider Login</a>
-        <a href="https://app.carevirt.com/guardians/sign_in" class="btn-ghost" onclick="closeMobile()">Guardian Login</a>
-        <a href="https://app.carevirt.com/sign_up" class="btn-primary" onclick="closeMobile()">Start Free Trial</a>
+        <p class="mob-login-label">Sign in as</p>
+        <div class="mob-login-group">
+          <a href="https://app.carevirt.com/providers/sign_in" class="mob-login-card" onclick="closeMobile()">
+            <span class="mob-login-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M22 11a4 4 0 0 0-4-4"/>
+                <path d="M22 15a4 4 0 0 0-4 4"/>
+              </svg>
+            </span>
+            <span class="mob-login-title">Provider</span>
+            <span class="mob-login-sub">Login &rarr;</span>
+          </a>
+          <a href="https://app.carevirt.com/guardians/sign_in" class="mob-login-card" onclick="closeMobile()">
+            <span class="mob-login-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </span>
+            <span class="mob-login-title">Guardian</span>
+            <span class="mob-login-sub">Login &rarr;</span>
+          </a>
+        </div>
+        <div class="mob-divider"><span>or</span></div>
+        <a href="https://app.carevirt.com/sign_up" class="mob-cta-btn" onclick="closeMobile()">
+          <span class="mob-cta-text">Start Free Trial</span>
+        </a>
       </div>
     </div>
   </header>

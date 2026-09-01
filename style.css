@@ -551,10 +551,139 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mobile-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 16px;
+  gap: 0;
+  padding: 20px 16px 24px;
+  background: #f0fdfb;
+  border-top: 1px solid rgba(20,184,166,.15);
+  margin-top: 8px;
 }
-.mobile-actions .btn-primary, .mobile-actions .btn-ghost { justify-content: center; }
+
+/* "Sign in as" label */
+.mob-login-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0 0 10px;
+}
+
+/* Two-column login card grid */
+.mob-login-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mob-login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.mob-login-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 16px rgba(20,184,166,.15);
+  transform: translateY(-2px);
+}
+.mob-login-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ccfbf1, #d1fae5);
+  color: var(--teal-dark);
+}
+.mob-login-title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #111827;
+}
+.mob-login-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--teal-dark);
+}
+
+/* Divider */
+.mob-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+.mob-divider::before,
+.mob-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(20,184,166,.2);
+}
+.mob-divider span {
+  color: #9ca3af;
+}
+
+/* CTA button */
+.mob-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 15px 24px;
+  background: #000;
+  background-size: 200% auto;
+  border-radius: 14px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.1) inset;
+  transition: box-shadow 0.25s, transform 0.18s;
+}
+.mob-cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.18) 50%, transparent 70%);
+  background-size: 200% auto;
+  animation: mob-cta-sheen 2.8s linear infinite;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.mob-cta-btn:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.15) inset;
+  transform: translateY(-2px);
+}
+.mob-cta-btn:active {
+  transform: translateY(0);
+}
+.mob-cta-text {
+  position: relative;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 1px 8px rgba(0,0,0,.15);
+}
+
+@keyframes mob-cta-sheen {
+  0%   { background-position: -100% center; }
+  100% { background-position: 300% center; }
+}
 
 /* =============================================
    HERO
@@ -3427,6 +3556,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .acard { padding: 16px 18px; }
   .acard-2, .acard-3 { margin-left: 0; }
 
+  /* Pricing */
+  .pricing { padding: 60px 0; }
+  .pricing .section-title { margin-bottom: 28px; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+  .pricing-card { padding: 28px 20px; }
+
   /* CTA banner */
   .cta-banner { padding: 60px 0; }
   .cta-banner h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
@@ -3548,7 +3683,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
+    padding: 15px 20px;
     background: none;
     border: none;
     font-family: 'Red Hat Display', sans-serif;
@@ -3557,34 +3692,92 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     color: #111827;
     cursor: pointer;
     text-align: left;
+    transition: color 0.2s, background 0.2s;
+  }
+  .mob-section.open > button.mob-section-btn {
+    color: var(--teal-dark);
+    background: #f0fdfb;
   }
   .mob-chevron {
-    transition: transform 0.22s ease;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
+    color: #9ca3af;
   }
   .mob-section.open .mob-chevron {
     transform: rotate(180deg);
+    color: var(--teal);
   }
   .mob-section-body {
-    display: none;
+    display: flex;
     flex-direction: column;
-    padding: 0 0 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.28s ease,
+                padding 0.3s ease;
+    padding: 0 12px;
+    background: #f8fffe;
+    border-left: 3px solid var(--teal);
+    margin: 0 16px 0 20px;
+    border-radius: 0 0 10px 10px;
   }
   .mob-section.open .mob-section-body {
-    display: flex;
-    max-height: 220px;
+    max-height: 260px;
     overflow-y: auto;
+    opacity: 1;
+    padding: 6px 12px 12px;
   }
+
+  /* Pricing — plain link matching other mob-section-btn items */
+  .mob-section:has(a.mob-section-btn) {
+    border-bottom: 1px solid #f1f3f5;
+  }
+  a.mob-section-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    background: none;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+  }
+  a.mob-section-btn:hover {
+    color: #000;
+  }
+
   .mob-feature {
-    padding: 9px 28px;
-    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: #374151;
     text-decoration: none;
+    border-radius: 7px;
     transition: background 0.15s, color 0.15s;
   }
+  .mob-feature::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.15s, transform 0.15s;
+  }
   .mob-feature:hover {
-    background: #f0f7ff;
-    color: #0891b2;
+    background: rgba(20,184,166,.08);
+    color: var(--teal-dark);
+  }
+  .mob-feature:hover::before {
+    opacity: 1;
+    transform: scale(1.3);
   }
 
   /* Stack features grid to single column on mobile */
